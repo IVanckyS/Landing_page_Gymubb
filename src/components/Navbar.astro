@@ -1,0 +1,72 @@
+---
+---
+<header id="navbar" class="navbar-glass fixed top-0 left-0 right-0 z-50">
+  <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+
+    <a href="#hero" class="flex items-center gap-2 group" aria-label="Gym UBB">
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" class="text-blue-500 group-hover:text-violet-400 transition-colors duration-300">
+        <rect x="2" y="11" width="5" height="6" rx="1.5" fill="currentColor" opacity="0.7"/>
+        <rect x="21" y="11" width="5" height="6" rx="1.5" fill="currentColor" opacity="0.7"/>
+        <rect x="7" y="8" width="4" height="12" rx="1.5" fill="currentColor"/>
+        <rect x="17" y="8" width="4" height="12" rx="1.5" fill="currentColor"/>
+        <rect x="11" y="12" width="6" height="4" rx="1" fill="currentColor"/>
+      </svg>
+      <span class="font-black text-xl tracking-tight">
+        <span class="text-white">Gym</span><span class="gradient-text">UBB</span>
+      </span>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-400">
+      <a href="#features"     class="hover:text-white transition-colors duration-200">Features</a>
+      <a href="#screenshots"  class="hover:text-white transition-colors duration-200">Screenshots</a>
+      <a href="#stack"        class="hover:text-white transition-colors duration-200">Stack</a>
+      <a href="#about"        class="hover:text-white transition-colors duration-200">Sobre el proyecto</a>
+      <a
+        href="https://github.com/IVanckyS/mockup_gymubb.git"
+        target="_blank"
+        rel="noopener"
+        class="btn-primary text-white px-4 py-2 rounded-lg text-sm font-semibold"
+      >
+        GitHub ↗
+      </a>
+    </nav>
+
+    <button id="mobile-menu-btn" class="md:hidden text-slate-400 hover:text-white transition-colors" aria-label="Menú">
+      <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line x1="3" y1="6"  x2="21" y2="6"/>
+        <line x1="3" y1="12" x2="21" y2="12"/>
+        <line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </button>
+  </div>
+
+  <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 flex flex-col gap-4 text-sm font-semibold text-slate-400">
+    <a href="#features"    class="hover:text-white transition-colors duration-200">Features</a>
+    <a href="#screenshots" class="hover:text-white transition-colors duration-200">Screenshots</a>
+    <a href="#stack"       class="hover:text-white transition-colors duration-200">Stack</a>
+    <a href="#about"       class="hover:text-white transition-colors duration-200">Sobre el proyecto</a>
+    <a href="https://github.com/IVanckyS/mockup_gymubb.git" target="_blank" rel="noopener" class="text-blue-400 hover:text-blue-300 transition-colors">GitHub ↗</a>
+  </div>
+</header>
+
+<script>
+  const navbar = document.getElementById('navbar');
+  const mobileBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 40) {
+      navbar?.classList.add('navbar-scrolled');
+    } else {
+      navbar?.classList.remove('navbar-scrolled');
+    }
+  }, { passive: true });
+
+  mobileBtn?.addEventListener('click', () => {
+    mobileMenu?.classList.toggle('hidden');
+  });
+
+  mobileMenu?.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+  });
+</script>

@@ -1,0 +1,214 @@
+---
+const screenshots = [
+  {
+    id: 0,
+    file: 'mockup-bodymap.png',
+    label: 'Mapa corporal',
+    desc: 'Diagrama anatómico SVG interactivo — toca un músculo para filtrar ejercicios',
+    accent: '#8b5cf6',
+  },
+  {
+    id: 1,
+    file: 'mockup-ranking.png',
+    label: 'Ranking Wilks',
+    desc: 'Tabla de líderes gamificada con puntaje Wilks y podio visual',
+    accent: '#f59e0b',
+  },
+  {
+    id: 2,
+    file: 'mockup-rutinas.png',
+    label: 'Rutinas',
+    desc: 'Gestor de rutinas personalizadas con splits y días configurables',
+    accent: '#10b981',
+  },
+  {
+    id: 3,
+    file: 'mockup-exercise.png',
+    label: 'Detalle de ejercicio',
+    desc: 'Ficha completa con instrucciones, músculos y variaciones',
+    accent: '#3b82f6',
+  },
+  {
+    id: 4,
+    file: 'mockup-articles.png',
+    label: 'Artículos educativos',
+    desc: 'Biblioteca de contenido sobre técnica, nutrición y programación',
+    accent: '#ec4899',
+  },
+  {
+    id: 5,
+    file: 'mockup-news.png',
+    label: 'Novedades',
+    desc: 'Feed de noticias y eventos del gimnasio universitario',
+    accent: '#14b8a6',
+  },
+  {
+    id: 6,
+    file: 'mockup-home.png',
+    label: 'Dashboard',
+    desc: 'Pantalla principal: estadísticas, racha actual y sesión del día',
+    accent: '#6366f1',
+  },
+  {
+    id: 7,
+    file: 'mockup-perfil.png',
+    label: 'Perfil',
+    desc: 'Datos personales, récords, peso corporal y logros desbloqueados',
+    accent: '#10b981',
+  },
+];
+---
+
+<style>
+  .thumb-scroll::-webkit-scrollbar { width: 3px; }
+  .thumb-scroll::-webkit-scrollbar-track { background: transparent; }
+  .thumb-scroll::-webkit-scrollbar-thumb { background: rgba(139,92,246,0.3); border-radius: 99px; }
+  .thumb-scroll::-webkit-scrollbar-thumb:hover { background: rgba(139,92,246,0.6); }
+
+  #sc-main-img { transition: opacity 0.2s ease; }
+
+  #sc-phone-glow  { transition: background 0.4s ease; }
+  #sc-phone-shell { transition: box-shadow 0.4s ease; }
+</style>
+
+<section id="screenshots" class="py-24 px-6 relative overflow-hidden">
+  <div class="absolute inset-0 pointer-events-none"
+    style="background: radial-gradient(ellipse 60% 40% at 50% 50%, rgba(139,92,246,0.06) 0%, transparent 70%);">
+  </div>
+
+  <div class="max-w-5xl mx-auto relative z-10">
+
+    <div class="mb-14 reveal text-center">
+      <div class="section-line w-16 mb-6 mx-auto"></div>
+      <h2 class="font-black text-white mb-4" style="font-size: clamp(2rem, 4vw, 3rem);">
+        Hecho para
+        <span class="gradient-text">verse increíble.</span>
+      </h2>
+      <p class="text-slate-400 max-w-lg mx-auto" style="font-size: 1.05rem;">
+        Diseño moderno pensado para la comunidad universitaria. Selecciona cualquier pantalla para explorarla.
+      </p>
+    </div>
+
+    <div class="reveal flex flex-col lg:flex-row items-center lg:items-start gap-10 justify-center">
+
+      <div class="flex-shrink-0 relative">
+        <div id="sc-phone-glow" class="absolute inset-0 rounded-[3rem] pointer-events-none"
+          style="background: radial-gradient(ellipse 80% 60% at 50% 70%, rgba(139,92,246,0.45) 0%, transparent 70%); filter: blur(36px); transform: scaleY(0.55) translateY(50%);">
+        </div>
+
+        <div id="sc-phone-shell" class="relative w-64 xl:w-72 rounded-[2.6rem] overflow-hidden"
+          style="box-shadow: 0 0 0 2px rgba(139,92,246,0.5), 0 0 0 3px rgba(0,0,0,0.8), 0 32px 80px rgba(139,92,246,0.25), 0 0 0 1px rgba(255,255,255,0.05);">
+          <div class="flex justify-center items-center py-2.5 bg-[#0a0a0c]">
+            <div class="w-20 h-1.5 rounded-full bg-[#1c1c22]"></div>
+          </div>
+          <img
+            id="sc-main-img"
+            src="/gym-ubb/images/mockup-bodymap.png"
+            alt="Mapa corporal Gym UBB"
+            class="w-full block"
+            style="display: block;"
+          />
+          <div class="flex justify-center py-2 bg-[#0a0a0c]">
+            <div class="w-24 h-1 rounded-full bg-[#1c1c22]"></div>
+          </div>
+        </div>
+
+        <div class="mt-5 flex flex-col items-center gap-1.5">
+          <div class="flex items-center gap-2 bg-[#161618] border border-white/8 rounded-full px-4 py-1.5">
+            <div id="sc-dot" class="w-2 h-2 rounded-full" style="background:#8b5cf6;"></div>
+            <span id="sc-label" class="text-slate-200 text-xs font-semibold">Mapa corporal</span>
+          </div>
+          <p id="sc-desc" class="text-slate-500 text-[11px] text-center max-w-[15rem] leading-relaxed">
+            Diagrama anatómico SVG interactivo — toca un músculo para filtrar ejercicios
+          </p>
+        </div>
+      </div>
+
+      <div class="flex lg:flex-col gap-3 w-full lg:w-48 xl:w-52
+                  lg:max-h-[600px] overflow-x-auto lg:overflow-x-hidden lg:overflow-y-auto
+                  pb-2 lg:pb-0 thumb-scroll flex-shrink-0">
+        {screenshots.map((s) => (
+          <button
+            class="sc-thumb group flex-shrink-0 w-44 lg:w-full
+                   bg-[#111113] rounded-xl overflow-hidden border text-left
+                   transition-all duration-250 cursor-pointer"
+            data-id={s.id}
+            data-file={s.file}
+            data-label={s.label}
+            data-desc={s.desc}
+            data-accent={s.accent}
+            style={s.id === 0
+              ? `border-color:${s.accent}60; box-shadow:0 0 18px ${s.accent}22;`
+              : 'border-color:rgba(255,255,255,0.06);'}
+          >
+            <div class="overflow-hidden" style="height:80px;">
+              <img
+                src={`/gym-ubb/images/${s.file}`}
+                alt={s.label}
+                class="w-full h-full object-cover object-top
+                       group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div class="px-2.5 py-2 flex items-center gap-2">
+              <div class="w-1.5 h-1.5 rounded-full flex-shrink-0"
+                style={`background:${s.accent};`}></div>
+              <span class="text-slate-300 text-[11px] font-semibold truncate leading-tight">
+                {s.label}
+              </span>
+            </div>
+          </button>
+        ))}
+      </div>
+    </div>
+
+    <p class="text-center text-slate-700 text-xs mt-10 reveal">
+      Capturas reales de la aplicación · Flutter · Android &amp; iOS
+    </p>
+  </div>
+</section>
+
+<script>
+  const thumbs    = document.querySelectorAll<HTMLElement>('.sc-thumb');
+  const mainImg   = document.getElementById('sc-main-img')   as HTMLImageElement;
+  const scLabel   = document.getElementById('sc-label')!;
+  const scDesc    = document.getElementById('sc-desc')!;
+  const scDot     = document.getElementById('sc-dot')        as HTMLElement;
+  const phoneGlow = document.getElementById('sc-phone-glow') as HTMLElement;
+  const phoneShell= document.getElementById('sc-phone-shell') as HTMLElement;
+
+  activateThumb(document.querySelector<HTMLElement>('.sc-thumb[data-id="0"]')!);
+
+  thumbs.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const { file, label, desc, accent } = btn.dataset as Record<string,string>;
+
+      mainImg.style.opacity = '0';
+      setTimeout(() => {
+        mainImg.src = `/gym-ubb/images/${file}`;
+        mainImg.alt = label;
+        mainImg.style.opacity = '1';
+      }, 180);
+
+      scLabel.textContent = label;
+      scDesc.textContent  = desc;
+      scDot.style.background = accent;
+
+      phoneGlow.style.background =
+        `radial-gradient(ellipse 80% 60% at 50% 70%, ${accent}44 0%, transparent 70%)`;
+      phoneShell.style.boxShadow =
+        `0 0 0 2px ${accent}70, 0 0 0 3px rgba(0,0,0,0.8), 0 32px 80px ${accent}28, 0 0 0 1px rgba(255,255,255,0.05)`;
+
+      thumbs.forEach(t => {
+        t.style.borderColor = 'rgba(255,255,255,0.06)';
+        t.style.boxShadow   = '';
+      });
+      activateThumb(btn);
+    });
+  });
+
+  function activateThumb(btn: HTMLElement) {
+    const accent = btn.dataset.accent!;
+    btn.style.borderColor = `${accent}60`;
+    btn.style.boxShadow   = `0 0 18px ${accent}22`;
+  }
+</script>

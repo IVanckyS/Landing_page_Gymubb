@@ -1,0 +1,99 @@
+---
+---
+
+<section id="about" class="py-28 px-6 relative overflow-hidden">
+  <div class="absolute inset-0 pointer-events-none"
+    style="background: radial-gradient(ellipse 80% 60% at 0% 50%, rgba(59,130,246,0.06) 0%, transparent 60%), radial-gradient(ellipse 60% 40% at 100% 50%, rgba(139,92,246,0.05) 0%, transparent 60%);">
+  </div>
+
+  <div class="max-w-6xl mx-auto relative z-10">
+    <div class="flex flex-col lg:flex-row items-center gap-16">
+
+      <div class="flex-1 reveal">
+        <div class="section-line w-16 mb-6"></div>
+        <h2 class="font-black text-white mb-6" style="font-size: clamp(2rem, 4vw, 3rem);">
+          Sobre el
+          <span class="gradient-text">proyecto.</span>
+        </h2>
+
+        <div class="flex flex-col gap-5 text-slate-300 leading-relaxed" style="font-size: 1rem;">
+          <p>
+            <strong class="text-white">Gym UBB</strong> es una aplicación móvil de gestión de gimnasio
+            desarrollada como proyecto de tesis en
+            <strong class="text-blue-400">Ingeniería de Ejecución en Computación e Informática Informática</strong> en la
+            <strong class="text-blue-400">Universidad del Bío-Bío</strong>.
+          </p>
+          <p>
+            El proyecto nació de la necesidad de digitalizar la experiencia en el gimnasio universitario,
+            integrando funcionalidades como el registro visual de ejercicios mediante un
+            <strong class="text-white">mapa corporal SVG interactivo</strong>, un sistema de ranking
+            gamificado basado en el <strong class="text-white">puntaje Wilks</strong> y
+            gestión completa de rutinas y sesiones de entrenamiento.
+          </p>
+          <p>
+            La arquitectura está diseñada para ser robusta y escalable: backend en
+            <strong class="text-white">Dart con Shelf</strong>, base de datos
+            <strong class="text-white">PostgreSQL</strong>, containerización con
+            <strong class="text-white">Docker</strong> y app móvil en <strong class="text-white">Flutter</strong>
+            para Android e iOS.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4 mt-8">
+          {[
+            { label: 'Universidad', value: 'U. del Bío-Bío' },
+            { label: 'Carrera', value: 'Ing. Ejecución en Computación e Informática' },
+            { label: 'Plataforma', value: 'Android · iOS' },
+            { label: 'Año', value: '2026' },
+          ].map(item => (
+            <div class="gradient-border p-4">
+              <div class="text-slate-500 text-xs font-medium mb-1">{item.label}</div>
+              <div class="text-white font-bold text-sm">{item.value}</div>
+            </div>
+          ))}
+        </div>
+
+        <div class="mt-8 flex flex-col sm:flex-row gap-4">
+          <a
+            href="https://github.com/IVanckyS/mockup_gymubb.git"
+            target="_blank"
+            rel="noopener"
+            class="btn-secondary text-slate-200 font-semibold px-7 py-3.5 rounded-xl text-sm text-center"
+          >
+            Ver repositorio ↗
+          </a>
+          <a
+            href="#features"
+            class="btn-primary text-white font-semibold px-7 py-3.5 rounded-xl text-sm text-center"
+          >
+            Explorar features →
+          </a>
+        </div>
+      </div>
+
+      <div class="flex-shrink-0 reveal stagger-2">
+        <div class="relative">
+          <div class="absolute -inset-8 rounded-full opacity-30"
+            style="background: radial-gradient(ellipse, rgba(59,130,246,0.4) 0%, rgba(139,92,246,0.2) 50%, transparent 70%); filter: blur(20px);">
+          </div>
+
+          <div class="rotating-border rounded-full p-1 relative">
+            <div class="w-64 h-64 rounded-full overflow-hidden bg-[#111111] flex items-center justify-center">
+              <img
+                src="/gym-ubb/images/foquita.jpg"
+                alt="Iván Salas Molina"
+                class="w-full h-full object-cover"
+                style="object-position: center 20%;"
+              />
+            </div>
+          </div>
+
+          <div class="absolute -bottom-2 -right-2 badge-animated text-white text-xs font-bold px-3 py-1.5 rounded-full"
+            style="background: linear-gradient(135deg,#3b82f6,#8b5cf6);">
+            🦭
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

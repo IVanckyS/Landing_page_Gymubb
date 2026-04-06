@@ -1,0 +1,118 @@
+---
+const features = [
+  {
+    icon: `<svg viewBox="0 0 48 48" fill="none" class="w-10 h-10"><ellipse cx="24" cy="12" rx="7" ry="9" stroke="#3b82f6" stroke-width="2"/><path d="M12 30c0-4 5.4-7 12-7s12 3 12 7v6H12v-6z" stroke="#3b82f6" stroke-width="2"/><path d="M8 36h32" stroke="#3b82f6" stroke-width="2" stroke-linecap="round"/><circle cx="10" cy="22" r="3" stroke="#8b5cf6" stroke-width="1.5"/><circle cx="38" cy="22" r="3" stroke="#8b5cf6" stroke-width="1.5"/></svg>`,
+    color: '#3b82f6',
+    glow: 'rgba(59,130,246,0.3)',
+    title: 'Mapa corporal interactivo',
+    desc: 'Selecciona un músculo en el diagrama anatómico SVG y accede al instante a los ejercicios que lo trabajan. Navegación visual sin menús ni búsquedas.',
+    screenshotId: 0,
+  },
+  {
+    icon: `<svg viewBox="0 0 48 48" fill="none" class="w-10 h-10"><path d="M24 6l4.5 9.1 10 1.5-7.2 7 1.7 10L24 29l-9 4.6 1.7-10L9.5 16.6l10-1.5L24 6z" stroke="#f59e0b" stroke-width="2" stroke-linejoin="round"/><circle cx="24" cy="24" r="16" stroke="#8b5cf6" stroke-width="1.5" stroke-dasharray="4 3"/></svg>`,
+    color: '#f59e0b',
+    glow: 'rgba(245,158,11,0.3)',
+    title: 'Ranking Wilks gamificado',
+    desc: 'Compite con los demás miembros del gimnasio a través de un ranking basado en puntaje Wilks. Asciende de liga y ve tu posición en el podio en tiempo real.',
+    screenshotId: 1,
+  },
+  {
+    icon: `<svg viewBox="0 0 48 48" fill="none" class="w-10 h-10"><rect x="8" y="8" width="32" height="36" rx="4" stroke="#8b5cf6" stroke-width="2"/><path d="M16 20h16M16 28h10" stroke="#8b5cf6" stroke-width="2" stroke-linecap="round"/><rect x="18" y="4" width="12" height="8" rx="2" stroke="#3b82f6" stroke-width="1.5"/></svg>`,
+    color: '#8b5cf6',
+    glow: 'rgba(139,92,246,0.3)',
+    title: 'Gestión de rutinas',
+    desc: 'Arma tu rutina semanal eligiendo ejercicios, series y repeticiones para cada día. Compatible con splits PPL, Upper/Lower, Full Body y cualquier esquema personalizado.',
+    screenshotId: 2,
+  },
+  {
+    icon: `<svg viewBox="0 0 48 48" fill="none" class="w-10 h-10"><ellipse cx="24" cy="14" rx="8" ry="9" stroke="#10b981" stroke-width="2"/><path d="M12 36c0-5 5.4-8 12-8s12 3 12 8" stroke="#10b981" stroke-width="2" stroke-linecap="round"/><path d="M30 28l4 4-4 4" stroke="#10b981" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M34 32h-6" stroke="#10b981" stroke-width="1.8" stroke-linecap="round"/></svg>`,
+    color: '#10b981',
+    glow: 'rgba(16,185,129,0.3)',
+    title: 'Perfil personal',
+    desc: 'Consulta tus datos personales, récords históricos, peso corporal y logros desbloqueados. Todo tu progreso como atleta en una sola pantalla.',
+    screenshotId: 7,
+  },
+  {
+    icon: `<svg viewBox="0 0 48 48" fill="none" class="w-10 h-10"><path d="M8 36V20l8-8 8 8 8-12 8 12v16H8z" stroke="#3b82f6" stroke-width="2" stroke-linejoin="round"/><path d="M8 28h6l4-6 4 6 4-10 6 10" stroke="#8b5cf6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
+    color: '#3b82f6',
+    glow: 'rgba(59,130,246,0.3)',
+    title: 'Historial de sesiones',
+    desc: 'Revisa cada entrenamiento registrado con su fecha, ejercicios ejecutados, series, repeticiones y volumen total. Visualiza tu evolución de un vistazo desde el dashboard.',
+    screenshotId: 6,
+  },
+  {
+    icon: `<svg viewBox="0 0 48 48" fill="none" class="w-10 h-10"><rect x="8" y="12" width="32" height="28" rx="4" stroke="#a78bfa" stroke-width="2"/><path d="M16 22h16M16 28h12M16 34h8" stroke="#a78bfa" stroke-width="2" stroke-linecap="round"/><circle cx="24" cy="8" r="4" stroke="#3b82f6" stroke-width="1.5"/><path d="M20 8h8" stroke="#3b82f6" stroke-width="1.5" stroke-linecap="round"/></svg>`,
+    color: '#a78bfa',
+    glow: 'rgba(167,139,250,0.3)',
+    title: 'Contenido educativo',
+    desc: 'Accede a artículos sobre técnica, nutrición y programación del entrenamiento. Cada ejercicio incluye ficha detallada con músculos involucrados, instrucciones y variaciones.',
+    screenshotId: 4,
+  },
+];
+---
+
+<section id="features" class="py-28 px-6 relative">
+  <div class="absolute inset-0 pointer-events-none"
+    style="background: radial-gradient(ellipse 80% 50% at 50% 0%, rgba(59,130,246,0.05) 0%, transparent 60%);">
+  </div>
+
+  <div class="max-w-6xl mx-auto relative z-10">
+
+    <div class="mb-16 reveal">
+      <div class="section-line w-16 mb-6"></div>
+      <h2 class="font-black text-white mb-4" style="font-size: clamp(2rem, 4vw, 3rem);">
+        Todo lo que necesitas<br/>
+        <span class="gradient-text">en una sola app.</span>
+      </h2>
+      <p class="text-slate-400 max-w-xl" style="font-size: 1.1rem; line-height: 1.7;">
+        Gym UBB integra las herramientas clave para gestionar tu entrenamiento
+        y la operación del gimnasio en una plataforma unificada.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {features.map((f, i) => (
+        <div
+          class={`reveal stagger-${i + 1} gradient-border card-glow p-7 flex flex-col gap-4 group`}
+          style="border-color: rgba(59,130,246,0.12);"
+        >
+          <div class="relative w-fit feature-icon-wrap" style={`color: ${f.color};`}>
+            <div class="absolute inset-0 rounded-xl blur-xl opacity-0 group-hover:opacity-70 transition-opacity duration-300"
+              style={`background: ${f.glow};`}></div>
+            <div class="relative p-3 rounded-xl transition-colors duration-300"
+              style={`background: ${f.color}14;`}
+              set:html={f.icon}>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-white font-bold text-lg mb-2">{f.title}</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">{f.desc}</p>
+          </div>
+
+          <div class="mt-auto pt-3 border-t border-white/5 flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <div class="w-1.5 h-1.5 rounded-full" style={`background: ${f.color};`}></div>
+            <button
+              class="feature-explore text-xs font-medium cursor-pointer bg-transparent border-none p-0"
+              style={`color: ${f.color};`}
+              data-screenshot={f.screenshotId}
+            >Explorar función →</button>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll<HTMLButtonElement>('.feature-explore').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const id = btn.dataset.screenshot;
+      const thumb = document.querySelector<HTMLElement>(`.sc-thumb[data-id="${id}"]`);
+      if (thumb) {
+        thumb.click();
+        document.getElementById('screenshots')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+</script>
